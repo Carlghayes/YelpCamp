@@ -31,7 +31,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-mongoose.connect("mongodb://localhost/yelp_camp_v4", { useUnifiedTopology: true , useNewUrlParser:true, useCreateIndex:true});
+mongoose.connect("mongodb+srv://carlghayes@gmail.com:Aeryn2014!!@cluster0-9jcot.mongodb.net/test?retryWrites=true&w=majority", { useUnifiedTopology: true , useNewUrlParser:true, useCreateIndex:true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"))
