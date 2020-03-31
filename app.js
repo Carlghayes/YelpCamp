@@ -30,8 +30,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-mongoose.connect("mongodb://localhost/yelp_camp_v4", { useUnifiedTopology: true , useNewUrlParser:true, useCreateIndex:true});
+mongoose.connect(process.env.DATABASEURL);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"))
